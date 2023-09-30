@@ -32,8 +32,9 @@ final class Movie: Model, Content {
         
     }
     
-    init(id: UUID? = nil, title: String){
+    init(id: UUID? = nil, title: String, poster: String){
         self.id = id
         self.title = title
+        self.poster = poster
     }
 }
