@@ -23,6 +23,7 @@ public func configure(_ app: Application) async throws {
     app.migrations.add(CreateMovieActor())
     app.migrations.add(AddPosterColumnToMovies())
 
+    try await app.autoMigrate().get()
     // register routes
     try routes(app)
 }
